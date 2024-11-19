@@ -68,8 +68,6 @@ public class frameMahasiswa extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tbMahasiswa = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        bNext = new javax.swing.JButton();
         bClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -92,20 +90,6 @@ public class frameMahasiswa extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbMahasiswa);
 
-        jButton1.setText("Prev");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        bNext.setText("Next");
-        bNext.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bNextActionPerformed(evt);
-            }
-        });
-
         bClose.setText("Close");
         bClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,10 +105,6 @@ public class frameMahasiswa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(bNext)
-                        .addGap(18, 18, 18)
                         .addComponent(bClose))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(15, 15, 15)
@@ -137,19 +117,12 @@ public class frameMahasiswa extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(bNext)
-                    .addComponent(bClose))
+                .addComponent(bClose)
                 .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNextActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_bNextActionPerformed
 
     private void tbMahasiswaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbMahasiswaMouseClicked
         int baris = tbMahasiswa.rowAtPoint(evt.getPoint());
@@ -160,13 +133,6 @@ public class frameMahasiswa extends javax.swing.JFrame {
     private void bCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCloseActionPerformed
         System.exit(0);
     }//GEN-LAST:event_bCloseActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (mahasiswa.getBaris()>0 && mahasiswa.getBaris()<=mahasiswa.getDataMhs().length()) {
-            mahasiswa.setBaris(mahasiswa.getBaris()+1);
-            loadTable();
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,8 +171,6 @@ public class frameMahasiswa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bClose;
-    private javax.swing.JButton bNext;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbMahasiswa;
     // End of variables declaration//GEN-END:variables
